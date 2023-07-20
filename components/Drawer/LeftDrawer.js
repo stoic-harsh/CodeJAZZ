@@ -20,52 +20,31 @@ const shizuru = Shizuru({
 
 const inter = Inter({ subsets: ['latin'] })
 
-const LeftDrawer = ({ open, setOpen })=>{
-
+const LeftDrawer = ({ open, setOpen, users })=>{
+    
     const handleDrawerClose = ()=>{
         setOpen(false);
-
-        document.getElementById("editor_textArea").style.width = "100vw";
-        document.getElementById("editor_textArea").style.translate = "0";
-        document.getElementById("menu_icon").style.display = "block";
     }
-
-
-    const [users, setUsers] = useState([
-        {id:1, name:"Harshit Gupta"},
-        {id:2, name:"John Doe"},
-        {id:3, name: "Hello Ji"},
-        {id:4, name: "Hello Ji"},
-        {id:4, name: "Hello Ji"},
-        {id:4, name: "Hello Ji"},
-        {id:4, name: "Hello Ji"},
-        {id:4, name: "Hello Ji"},
-        {id:4, name: "Hello Ji"},
-        {id:4, name: "Hello Ji"},
-        {id:4, name: "Hello Ji"},
-        {id:4, name: "Hello Ji"},
-    ])
 
     const linkClass = "text-indigo-200 text-bold underline underline-2";
 
     
     return <Drawer
         sx={{
-          width: "275px",
+          width: "280px",
           flexShrink: 0,
           '& .MuiDrawer-paper': {
-            width: "275px",
+            width: "280px",
             boxSizing: 'border-box',
             backgroundColor: '#031818',
             color: 'white',
             padding: '10px',
+            overflow: 'hidden'
           },
         }}
         variant="persistent"
         anchor="left"
         open={open}
-
-        className = "overflow-hidden"
     >
         
         {/* LOGO ON TOP OF DRAWER */}
@@ -91,19 +70,19 @@ const LeftDrawer = ({ open, setOpen })=>{
         <div>```````````````````````````````````````````````````````````</div>
         <div>Dashboard created by "stoic-harsh". Reach out to him at :</div>
         <div className={`${inter.className} font-extrabold text-center mt-1 text-[15px]`} style={{ wordSpacing: "10px" }}>
-            <Link className={linkClass} href="https://www.linkedin.com/in/stoic-harsh/">LinkedIn</Link> | <Link className={linkClass} href="https://github.com/stoic-harsh/">Github</Link> | <Link className={linkClass} href="mailto:20bme011@nith.ac.in">Gmail</Link>
+            <Link target="_blank" className={linkClass} href="https://www.linkedin.com/in/stoic-harsh/">LinkedIn</Link> | <Link target="_blank" className={linkClass} href="https://github.com/stoic-harsh/">Github</Link> | <Link target="_blank" className={linkClass} href="mailto:20bme011@nith.ac.in">Gmail</Link>
         </div>
 
         <div className="my-2 w-full h-[0.5px] bg-[rgba(255,255,255,0.5)]" />
         
 
         {/* Users */}
-        <div>Active Connections : {users.length}</div>
-        <div className="overflow-auto flex flex-wrap my-2 mb-3 ml-2">
+        <div>Active Connections : {users?.length}</div>
+        <div className="overflow-auto flex flex-wrap my-3 mb-3 ml-2">
             {
-                users.map(({id, name})=>{
-                    return <NamedAvatar key={id} name={name}/>
-                })
+                users && (users.map((user)=>{
+                    return <NamedAvatar key={user} name={user}/>
+                }))
             }
         </div>
         

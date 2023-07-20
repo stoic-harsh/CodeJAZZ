@@ -8,14 +8,12 @@
   box-sizing: border-box;
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none; /* Firefox */  
-  resize: none;
 }
 
 body{
   width: 100vw;
   height: 100vh;
   overflow-x: hidden;
-  overflow-y: auto;
 }
 
 /* Hide scrollbar for Chrome, Safari and Opera */
@@ -62,7 +60,28 @@ input::-ms-input-placeholder { /* Microsoft Edge */
 }
 
 .bar-gradient{
-  /* background-image: linear-gradient(to right, #0f0c29, #302b63, #24243e); */
-  /* background-image: linear-gradient(to right, #141e30, #243b55); */
-  background-image: linear-gradient(to right, #33001b, #ff0084); 
+  background-image: linear-gradient(to right, #33001b, #ff0084);
+  
+}
+
+.dropdown-gradient{
+  background-image: linear-gradient(to right, #141e30, #243b55); 
+}
+
+.editor-window{
+  background: #fe8c00;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #f83600, #fe8c00);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #f83600, #fe8c00); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.output-window{
+  background: #3C3B3F;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #605C3C, #3C3B3F);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #605C3C, #3C3B3F); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.input-window{
+  background: #41295a;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #2F0743, #41295a);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #2F0743, #41295a); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }

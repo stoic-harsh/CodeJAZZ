@@ -21,7 +21,7 @@ export default function AlertToast({ open, color, message, setOpen }) {
 
   return (
 
-      <Snackbar open={open} autoHideDuration={5000} onClose={handleClose} anchorOrigin={{ vertical, horizontal }} key={vertical+horizontal}>
+      <Snackbar open={open} autoHideDuration={4000} onClose={handleClose} anchorOrigin={{ vertical, horizontal }} key={vertical+horizontal}>
         <Alert onClose={handleClose} severity={color} className="w-[220px] sm:w-[100%]" >
           { message }
         </Alert>

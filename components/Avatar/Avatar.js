@@ -99,7 +99,8 @@ function shortenName(name){
     else
     return arr[0] + " "+ arr[1][0];
 }
-// mr-[25px] mb-[15px] flex flex-col justify-center items-center
+
+
 export default function NamedAvatar({name}) {
   return <div className="flex flex-col mr-[25px] mb-[15px] items-center">
     <Avatar {...stringAvatar(name)} />

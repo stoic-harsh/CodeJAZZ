@@ -12,7 +12,7 @@ const edu_tass = Edu_TAS_Beginner({
 
 export default function Footer() {
 
-    return <div className="bg-black text-white flex flex-col sm:flex-row items-center justify-center w-[100vw] bottom-0 py-4">
+    return <div className="bg-black text-white flex flex-col sm:flex-row items-center justify-center w-[100vw] py-4">
 
         <div className={`${abel.className} text-gray-300 text-[20px] flex flex-col items-center `}>
             Supported by
