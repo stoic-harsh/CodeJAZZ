@@ -13,12 +13,13 @@ import { AlertContext } from "./layout";
 
 // FONTS
 const shizuru = Shizuru({
-    subsets: ["latin"],
-    weight: "400"
+    subsets: ['latin'],
+    weight: '400',
+    display: 'swap'
 });
 
 const inter = Inter({
-    subsets: ["latin"]
+    subsets: ['latin']
 });
 
 

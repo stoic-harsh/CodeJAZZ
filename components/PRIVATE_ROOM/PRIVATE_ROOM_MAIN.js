@@ -5,7 +5,7 @@ import { useState, useContext, useEffect } from "react";
 
 import LeftDrawer from "@/components/Drawer/LeftDrawer";
 
-import AppBar from "@/components/Appbar/Appbar";
+import AppBar from "@components/Appbar/Appbar";
 
 import CodeEditorWindow from "@/components/CodeEditorWindow/CodeEditorWindow";
 import available_languages from "@/utils/AvailableConfigurations/AvailableLanguages";
@@ -13,7 +13,6 @@ import available_languages from "@/utils/AvailableConfigurations/AvailableLangua
 import Button from '@mui/material/Button';
 import SendIcon from '@mui/icons-material/Send';
 import Loader from "@/components/Loader_Default/Loader";
-import { RoomsContext } from "@/app/page";
 
 
 

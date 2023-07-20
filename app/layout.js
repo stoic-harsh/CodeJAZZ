@@ -5,17 +5,12 @@ import './globals.css';
 // ALERT MESSAGES MANAGEMENT
 import AlertToast from '@/components/Toast/AlertToast';
 import { useState, createContext } from 'react';
+import Head from 'next/head';
 
 export const AlertContext = createContext();
 export const RoomsContext = createContext();
 
-export const metadata = {
-  title: 'CodeJAZZ',
-  description: 'real-time code editor with private room sessions',
-}
-
 export default function RootLayout({ children }) {
-
 
   const [open, setOpen] = useState(false);
   const [color, setColor] = useState("success");
@@ -24,6 +19,10 @@ export default function RootLayout({ children }) {
 
   return (
     <html lang="en">
+      <Head>
+        <title>CodeJAZZ</title>
+        <meta name="description" content="real-time code editor with private room sessions" key="desc" />
+      </Head>
       <body suppressHydrationWarning={true}>
           <AlertContext.Provider value={{open, setOpen, color, setColor, alert, setAlert }}>
             {children}
