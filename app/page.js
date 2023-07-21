@@ -60,7 +60,7 @@ const Home = ()=>{
         <div className="text-white flex items-center mt-3 ml-4 sm:mt-6 sm:ml-9">
             <img className="w-[45px] mr-3" src="/logo.png" alt="logo_CodeJAZZ"/>
             <div className="bg-white w-[0.5px] h-[65px]"/>
-            <div className={`${shizuru.className} ml-3 flex flex-col`}>
+            <div className={`${shizuru.className} ml-3 flex flex-col`} style={{ wordSpacing: '-20px' }}>
                 <span className="text-[28px]">Code</span>
                 <span className="ml-6 text-[25px] font-extrabold">JA<span className="text-yellow-300">Z</span><span className="text-orange-500">Z</span></span>
             </div>

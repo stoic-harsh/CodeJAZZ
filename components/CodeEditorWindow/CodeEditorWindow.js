@@ -16,7 +16,8 @@ export default function CodeEditorWindow({ themeIndex, languageIndex, userInfo, 
             })
         }).catch((err) => alert(err.message));
 
-        editorRef.current.onDidType(()=>channel.publish('codeChange', { 
+        console.log(editorRef.current);
+        editorRef.current.onKeyUp(()=>channel.publish('codeChange', { 
             "code": editorRef.current.getValue(),
             "origin": userInfo
         }));
