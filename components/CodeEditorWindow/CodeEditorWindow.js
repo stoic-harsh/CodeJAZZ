@@ -8,6 +8,7 @@ export default function CodeEditorWindow({ themeIndex, languageIndex, userInfo, 
     // loading themes
     function handleEditorDidMount(editor, monaco) {
         editorRef.current = editor;
+        editorRef.current.setValue('// This is Javascript code\nconsole.log("Welcome to CodeJAZZ");')
 
         import("@/utils/ThemesData").then((module)=>{
             available_themes.map((data)=>{

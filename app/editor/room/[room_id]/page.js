@@ -139,6 +139,7 @@ const Editor = ()=>{
     // HANDLING COMPILATION
     const handleSubmit = async()=>{
         setLoader(true);
+        const currData = editorRef.current.getValue();
         try{
             const response = await fetch("/api/submit-code/", {
                 method: 'POST',
@@ -183,6 +184,8 @@ const Editor = ()=>{
             alertToast.setAlert(err.message);
             alertToast.setOpen(true);
         }
+        
+        channel.publish('codeChange', {"code": currData, "origin": '!@#$%^&*'});
     }
 
 
@@ -209,7 +212,7 @@ const Editor = ()=>{
                     <div className="w-[100%] h-[50%] input-window p-3 flex flex-col">
                         <div className="text-white mb-2">Input Window :</div>
                         <textarea className="w-[100%] h-[75%] bg-white resize-none rounded-md p-4 outline-none" value={input} onChange = { (event)=>{ setInput(event.target.value); } } />
-                        <Button onClick={ handleSubmit } sx={{marginTop: '10px'}} className="self-end bg-lime-600 md:bg-lime-800" variant="contained" endIcon={<SendIcon />}>
+                        <Button onClick={ handleSubmit } sx={{marginTop: '10px', backgroundColor: 'rgb(101 163 13)'}} className="self-end" variant="contained" endIcon={<SendIcon />}>
                             Compile and Run
                         </Button>
                     </div>
