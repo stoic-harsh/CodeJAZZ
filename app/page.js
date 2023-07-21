@@ -43,7 +43,7 @@ const Home = ()=>{
     
     const router = useRouter();
     const handleJoinRoom = ()=>{
-        if(userInfo.room_id === "" || userInfo.userName === ""){
+        if(userInfo.room_id === "" || userInfo.userName.trim() === ""){
             alertToast.setColor("error");
             alertToast.setAlert("Enter Required Field");
             alertToast.setOpen(true);
@@ -94,7 +94,7 @@ const Home = ()=>{
             value ={ userInfo.userName } 
             
             onInput={ (event)=>{
-                userInfo.setUserName(event.target.value.trim());
+                userInfo.setUserName(event.target.value);
             } }
             />
 
