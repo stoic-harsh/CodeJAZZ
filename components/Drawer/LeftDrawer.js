@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react";
+import { useRouter } from "next/navigation";
 import { Drawer, Button } from "@mui/material";
 
 
@@ -20,8 +20,15 @@ const shizuru = Shizuru({
 
 const inter = Inter({ subsets: ['latin'] })
 
-const LeftDrawer = ({ open, setOpen, users })=>{
+const LeftDrawer = ({ open, setOpen, users, channel, copyMeetingId })=>{
     
+    const router = useRouter();
+    const handleLeaveMeeting = ()=>{
+        channel.presence.leave();
+        window.removeEventListener('beforeunload', ()=>{channel.presence.leave()});
+        router.replace('/');
+    }
+
     const handleDrawerClose = ()=>{
         setOpen(false);
     }
@@ -80,8 +87,8 @@ const LeftDrawer = ({ open, setOpen, users })=>{
         <div>Active Connections : {users?.length}</div>
         <div className="overflow-auto flex flex-wrap my-3 mb-3 ml-2">
             {
-                users && (users.map((user)=>{
-                    return <NamedAvatar key={user} name={user}/>
+                users && (users.map(({key, name})=>{
+                    return <NamedAvatar key={key} name={name}/>
                 }))
             }
         </div>
@@ -91,11 +98,11 @@ const LeftDrawer = ({ open, setOpen, users })=>{
         
         {/* Buttons */}
         <div className="flex flex-col gap-3 mb-5 sm:mb-0">
-            <Button className="crypto font-sans" variant="contained" color="success">
+            <Button className="crypto font-sans" variant="contained" color="success" onClick={ copyMeetingId }>
                 Copy Meeting ID
             </Button>
 
-            <Button className="font-sans font-bold" variant="outlined" color="error">
+            <Button className="font-sans font-bold" variant="outlined" color="error" onClick={ handleLeaveMeeting }>
                 Leave Meeting
             </Button>
         </div>

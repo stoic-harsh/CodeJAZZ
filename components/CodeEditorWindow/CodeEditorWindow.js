@@ -3,24 +3,23 @@ import { Editor as CodeEditor } from "@monaco-editor/react";
 import available_themes from "../../utils/AvailableConfigurations/AvailableThemes";
 import available_languages from "@/utils/AvailableConfigurations/AvailableLanguages";
 
-export default function CodeEditorWindow({ channel, themeIndex, languageIndex, setCode, code }){
+export default function CodeEditorWindow({ themeIndex, languageIndex, userInfo, editorRef, channel }){
 
     // loading themes
     function handleEditorDidMount(editor, monaco) {
+        editorRef.current = editor;
 
         import("@/utils/ThemesData").then((module)=>{
             available_themes.map((data)=>{
                 monaco.editor.defineTheme(data.parsed, module[data.name]);
             })
         }).catch((err) => alert(err.message));
-    }
 
-    const handleCodeChange = (newCode)=>{
-        setCode(newCode);
-        console.log(channel);
-        channel.publish("check", "");
+        editorRef.current.onDidType(()=>channel.publish('codeChange', { 
+            "code": editorRef.current.getValue(),
+            "origin": userInfo
+        }));
     }
-
 
     return <CodeEditor 
     height="100%"
@@ -38,10 +37,5 @@ export default function CodeEditorWindow({ channel, themeIndex, languageIndex, s
         mouseWheelZoom: true    
     }}
 
-    value={code}
-
-    onChange = { (value,event)=>{
-        handleCodeChange(value);
-    } }
 />
 }
