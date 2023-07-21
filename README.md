@@ -25,6 +25,7 @@ https://code-jazz.vercel.app/
 * Innovative Collaboration
 
 ## Video Demo
+https://github.com/stoic-harsh/CodeJAZZ/assets/137406928/aa919327-3855-4e2f-80a5-e93204804ef4
 
 ## Tech/framework used and Pre-requisites
 * Next.js
