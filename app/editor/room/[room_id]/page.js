@@ -144,7 +144,7 @@ const Editor = ()=>{
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
-                    code: code,
+                    code: editorRef.current.getValue(),
                     id: available_languages[languageIndex].id,
                     input: input
                 })
