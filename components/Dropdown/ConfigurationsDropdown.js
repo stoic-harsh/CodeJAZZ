@@ -46,7 +46,7 @@ export default function ConfigurationsDropdownMenu({ setThemeIndex, setLanguageI
           'aria-labelledby': 'basic-button',
         }}
       >
-        <Chip label="Themes" className="bg-orange-400 text-white mb-[7px] ml-[10px] mt-[10px]"/>
+        <Chip label="Themes" sx={{ backgroundColor: "rgb(249 115 22)" }} className="text-white mb-[7px] ml-[10px] mt-[15px]"/>
         <Divider className="border-orange-400 border-2" />
         {
           available_themes.map((theme, index)=>{
@@ -60,9 +60,8 @@ export default function ConfigurationsDropdownMenu({ setThemeIndex, setLanguageI
             )}
           )
         }
-        <Divider />
         
-        <Chip label="Languages" className="bg-teal-900 text-white mb-[7px] ml-[10px] mt-[10px]"/>
+        <Chip label="Languages" sx={{ backgroundColor: "rgb(19 78 74)" }} className="text-white mb-[7px] ml-[10px] mt-[28px]"/>
         <Divider className="border-2 border-teal-900" />
         {
           available_languages.map((language, index)=>{
