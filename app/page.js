@@ -71,7 +71,7 @@ const Home = ()=>{
             
             <div className="mx-[20px] w-[450px] text-white p-4 md:p-6 flex flex-col bg-[rgba(255,255,255,0.17)] md:bg-[rgba(255,255,255,0.07)] border-[rgba(255,255,255,0.1)] rounded-md border">
             
-            <div className={`${shizuru.className} m-auto text-[33px] mb-[1px]`}>Code JA<span className="text-yellow-300">Z</span><span className="text-orange-500">Z</span></div>
+            <div className={`${shizuru.className} m-auto text-[33px] mb-[1px]`} style={{ wordSpacing: '-20px' }}>Code JA<span className="text-yellow-300">Z</span><span className="text-orange-500">Z</span></div>
             <div className={`${inter.className} m-auto text-[12px] text-teal-500`} style={{ fontWeight: "900" }}>Real-Time Code Collaboration</div>
             <div className="bg-[rgba(255,255,255,0.5)] h-[0.5px] mt-2 mb-6 " />
 
