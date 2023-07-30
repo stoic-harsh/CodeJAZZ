@@ -26,7 +26,7 @@ export default function CodeEditorWindow({ themeIndex, languageIndex, userInfo, 
     return <CodeEditor 
     height="100%"
     width="100%"
-    language= { available_languages[languageIndex] }
+    language = { available_languages[languageIndex].parsed }
     theme = { available_themes[themeIndex].parsed }
 
     onMount={handleEditorDidMount}

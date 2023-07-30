@@ -1,107 +1,133 @@
 const available_languages = [
       {
         "id": 63,
-        "name": "JavaScript"
+        "name": "JavaScript",
+        "parsed": "javascript"
       },
       {
         "id": 45,
-        "name": "Assembly"
+        "name": "Assembly",
+        "parsed": "assembly"
       },
       {
         "id": 46,
-        "name": "Bash"
+        "name": "Bash",
+        "parsed": "bash"
       },
       {
         "id": 47,
-        "name": "Basic"
+        "name": "Basic",
+        "parsed": "basic"
       },
       {
         "id": 50,
-        "name": "C (GCC 9.2.0)"
+        "name": "C (GCC 9.2.0)",
+        "parsed": "c"
       },
       {
         "id": 54,
-        "name": "C++ (GCC 9.2.0)"
+        "name": "C++ (GCC 9.2.0)",
+        "parsed": "cpp"
       },
       {
         "id": 51,
-        "name": "C#"
+        "name": "C#",
+        "parsed": "csharp"
       },
       {
         "id": 55,
-        "name": "Common Lisp"
+        "name": "Common Lisp",
+        "parsed": "lisp"
       },
       {
         "id": 56,
-        "name": "D (DMD 2.089.1)"
+        "name": "D (DMD 2.089.1)",
+        "parsed": "d"
       },
       {
         "id": 57,
-        "name": "Elixir"
+        "name": "Elixir",
+        "parsed": "elixir"
       },
       {
         "id": 58,
-        "name": "Erlang"
+        "name": "Erlang",
+        "parsed": "erlang"
       },
       {
         "id": 44,
-        "name": "Executable"
+        "name": "Executable",
+        "parsed": "ecl"
       },
       {
         "id": 59,
-        "name": "Fortran"
+        "name": "Fortran",
+        "parsed": "fortran"
       },
       {
         "id": 60,
-        "name": "Go"
+        "name": "Go",
+        "parsed": "go"
       },
       {
         "id": 61,
-        "name": "Haskell"
+        "name": "Haskell",
+        "parsed": "haskell"
       },
       {
         "id": 62,
-        "name": "Java"
+        "name": "Java",
+        "parsed": "java"
       },
       {
         "id": 64,
-        "name": "Lua"
+        "name": "Lua",
+        "parsed": "lua"
       },
       {
         "id": 65,
-        "name": "OCaml"
+        "name": "OCaml",
+        "parsed": "ocaml"
       },
       {
         "id": 66,
-        "name": "Octave"
+        "name": "Octave",
+        "parsed": "octave"
       },
       {
         "id": 67,
-        "name": "Pascal"
+        "name": "Pascal",
+        "parsed": "pascal"
       },
       {
         "id": 68,
-        "name": "PHP"
+        "name": "PHP",
+        "parsed": "php"
       },
       {
         "id": 69,
-        "name": "Prolog"
+        "name": "Prolog",
+        "parsed": "prolog"
       },
       {
         "id": 71,
-        "name": "Python (3.8.1)"
+        "name": "Python (3.8.1)",
+        "parsed": "python"
       },
       {
         "id": 72,
-        "name": "Ruby"
+        "name": "Ruby",
+        "parsed": "ruby"
       },
       {
         "id": 73,
-        "name": "Rust"
+        "name": "Rust",
+        "parsed": "rust"
       },
       {
         "id": 74,
-        "name": "TypeScript"
+        "name": "TypeScript",
+        "parsed": "typescript"
       }
 ]
 

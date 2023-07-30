@@ -24,7 +24,6 @@ const Editor = ()=>{
     const [loader, setLoader] = useState(false);
 
     // EDITOR CONTENT
-    const [code, setCode] = useState('');
     const editorRef = useRef(null);
 
 
