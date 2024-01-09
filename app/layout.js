@@ -2,6 +2,9 @@
 
 import './globals.css';
 
+// Vercel Analytics Utility
+import { Analytics } from '@vercel/analytics/react';
+
 // ALERT MESSAGES MANAGEMENT
 import AlertToast from '@/components/Toast/AlertToast';
 import { useState, createContext } from 'react';
@@ -33,6 +36,7 @@ export default function RootLayout({ children }) {
             </AlertContext.Provider>
           </UserContext.Provider>
         <AlertToast open={open} message={alert} color={color} setOpen={setOpen} />
+        <Analytics />
       </body>
     </html>
   )
